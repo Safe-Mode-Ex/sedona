@@ -1,12 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: {{projectTitle}}</title>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Sedona</title>
   </head>
   <body>
+    <header class="page-header">
+      <div class="logo">
+        <a class="logo__link">
+          <span class="visually-hidden">Логотип Седона</span>
+        </a>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+        <nav class="page-header__navigation navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">О Седоне</a>
+            </li>
+            <li class="navigation__item">
+              <a href="catalog.html" class="navigation__link">О Седоне</a>
+            </li>
+          </ul>
 
+          <ul class="navigation__list navigation__list--user">
+            <li class="navigation__item">
+              <a class="navigation__link">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <span class="visually-hidden">Избранное</span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Хочу сюда!</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <footer class="page-footer">
+      <section class="page-footer__subscribe subscribe">
+        <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
+
+        <p class="subscribe__text">
+          Только полезная информация и никакого спама, честное бойскаутское!
+        </p>
+
+        <form
+          class="subscribe__form"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <input
+            type="email"
+            class="subscribe__input"
+            placeholder="Ваш e-mail"
+          />
+          <button type="submit" class="subscribe__button">Подписаться</button>
+        </form>
+      </section>
+
+      <section class="page-footer__social social">
+        <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
+
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <span class="visually-hidden">ВК</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <span class="visually-hidden">Телеграмм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="page-footer__contacts contacts">
+        <h2 class="contacts__title visually-hidden">Контакты</h2>
+
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a href="tel:78128121212" class="contacts__link"
+              >+7 (812) 812-12-12</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <div class="page-footer__academy academy">
+        <a
+          href="https://htmlacademy.ru/intensive/htmlcss"
+          class="academy__link"
+        >
+          <span class="visually-hidden">HTML Academy логотип</span>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
