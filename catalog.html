@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="logo">
+        <a class="logo__link" href="index.html">
+          <span class="visually-hidden">Логотип Седона</span>
+        </a>
+
+        <nav class="page-header__navigation navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">О Седоне</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link">Гостиницы</a>
+            </li>
+          </ul>
+
+          <ul class="navigation__list navigation__list--user">
+            <li class="navigation__item">
+              <a class="navigation__link">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <span class="visually-hidden">Избранное</span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Хочу сюда!</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <header class="page-main__header">
+        <h1 class="page-main__title">Гостиницы Седоны</h1>
+
+        <div class="page-main__breadcrumbs breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="index.html" class="breadcrumbs__link">
+                <span class="visually-hidden">Главная</span>
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link">Гостиницы</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="breadcrumbs__filters filters">
+          <form
+            action="https://echo.htmlacademy.ru/"
+            method="get"
+            class="filters__form"
+          >
+            <fieldset class="filter__group">
+              <legend class="filter__title">Инфраструктура:</legend>
+
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <label class="filter__control control">
+                    <input
+                      type="checkbox"
+                      name="pool"
+                      class="control__input"
+                      checked
+                    />
+                    <span class="control__title">Бассейн</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__control control">
+                    <input
+                      type="checkbox"
+                      name="parking"
+                      class="control__input"
+                      checked
+                    />
+                    <span class="control__title">Парковка</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__control control">
+                    <input
+                      type="checkbox"
+                      name="wi-fi"
+                      class="control__input"
+                    />
+                    <span class="control__title">Wi-Fi</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filter__group">
+              <legend class="filter__title">Тип жилья:</legend>
+
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <label class="filter__control control">
+                    <input
+                      type="radio"
+                      name="housing-type"
+                      value="hotel"
+                      class="control__input"
+                      checked
+                    />
+                    <span class="control__title">Гостиница</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__control control">
+                    <input
+                      type="radio"
+                      name="housing-type"
+                      value="motel"
+                      class="control__input"
+                    />
+                    <span class="control__title">Мотель</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__control control">
+                    <input
+                      type="radio"
+                      name="housing-type"
+                      value="apartments"
+                      class="control__input"
+                    />
+                    <span class="control__title">Апартаменты</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filter__group">
+              <legend class="filter__title">Стоимость, &#8381;</legend>
+
+              <input type="number" id="price-min" name="price-min" value="0" />
+              <label for="price-min">от</label>
+
+              <input
+                type="number"
+                id="price-max"
+                name="price-max"
+                value="9000"
+              />
+              <label for="price-max">до</label>
+
+              <input type="range" />
+            </fieldset>
+
+            <div class="from__buttons">
+              <button type="submit" class="filters__button button">
+                Применить
+              </button>
+              <button type="reset" class="filters__button button">
+                Сбросить
+              </button>
+            </div>
+          </form>
+        </div>
+      </header>
+    </main>
+
+    <footer class="page-footer">
+      <section class="page-footer__subscribe subscribe">
+        <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
+
+        <p class="subscribe__text">
+          Только полезная информация и никакого спама, честное бойскаутское!
+        </p>
+
+        <form
+          class="subscribe__form"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <input
+            type="email"
+            class="subscribe__input"
+            placeholder="Ваш e-mail"
+          />
+          <button type="submit" class="subscribe__button">Подписаться</button>
+        </form>
+      </section>
+
+      <section class="page-footer__social social">
+        <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
+
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <span class="visually-hidden">ВК</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <span class="visually-hidden">Телеграмм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="page-footer__contacts contacts">
+        <h2 class="contacts__title visually-hidden">Контакты</h2>
+
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a href="tel:78128121212" class="contacts__link"
+              >+7 (812) 812-12-12</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <div class="page-footer__academy academy">
+        <a
+          href="https://htmlacademy.ru/intensive/htmlcss"
+          class="academy__link"
+        >
+          <span class="visually-hidden">HTML Academy логотип</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
