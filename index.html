@@ -225,7 +225,7 @@
     </main>
 
     <footer class="page-footer">
-      <section class="page-footer__subscribe subscribe">
+      <section class="page-footer__subscribe subscribe subscribe--with-bg">
         <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
 
         <p class="subscribe__text">
@@ -239,8 +239,10 @@
         >
           <input
             type="email"
+            name="email"
             class="subscribe__input"
             placeholder="Ваш e-mail"
+            autocomplete="email"
           />
           <button type="submit" class="subscribe__button button button--blue">
             Подписаться

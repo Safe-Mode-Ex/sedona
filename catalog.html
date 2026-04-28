@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header class="page-header">
@@ -50,7 +51,7 @@
     </header>
 
     <main class="page-main">
-      <header class="page-main__header">
+      <header class="page-main__header page-main__header--catalog">
         <h1 class="page-main__title">Гостиницы Седоны</h1>
 
         <div class="page-main__breadcrumbs breadcrumbs">
@@ -66,7 +67,7 @@
           </ul>
         </div>
 
-        <div class="breadcrumbs__filters filters">
+        <div class="page-main__filters filters">
           <form
             action="https://echo.htmlacademy.ru/"
             method="get"
@@ -155,25 +156,37 @@
             <fieldset class="filter__group">
               <legend class="filter__title">Стоимость, &#8381;</legend>
 
-              <input type="number" id="price-min" name="price-min" value="0" />
-              <label for="price-min">от</label>
+              <label for="price-min" class="filter__price">
+                <input
+                  type="number"
+                  id="price-min"
+                  name="price-min"
+                  value="0"
+                />
+                <span>от</span>
+              </label>
 
-              <input
-                type="number"
-                id="price-max"
-                name="price-max"
-                value="9000"
-              />
-              <label for="price-max">до</label>
+              <label for="price-max" class="filter__price">
+                <input
+                  type="number"
+                  id="price-max"
+                  name="price-max"
+                  value="9000"
+                />
+                <span>до</span>
+              </label>
 
               <input type="range" />
             </fieldset>
 
             <div class="form__buttons">
-              <button type="submit" class="filters__button button">
+              <button type="submit" class="filters__button button button--blue">
                 Применить
               </button>
-              <button type="reset" class="filters__button button">
+              <button
+                type="reset"
+                class="filters__button button button--transparent"
+              >
                 Сбросить
               </button>
             </div>
@@ -186,7 +199,7 @@
           <b>Найдено гостиниц: 38</b>
         </p>
 
-        <select class="handling__sort" aria-label="Сортировка">
+        <select class="handling__sort" name="sort" aria-label="Сортировка">
           <option value="popular">Сначала популярные</option>
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
@@ -223,22 +236,24 @@
                 <table class="offer__detail">
                   <tr>
                     <td>Гостиница</td>
-                    <td>От 4000 ₽</td>
+                    <td class="offer__price">От 4000 ₽</td>
                   </tr>
                 </table>
 
                 <div class="offer__links">
-                  <a href="#" class="offer__link offer__link--brown"
+                  <a href="#" class="offer__link button button--brown"
                     >Подробнее</a
                   >
-                  <a href="#" class="offer__link offer__link--blue"
+                  <a href="#" class="offer__link button button--blue"
                     >В избранное</a
                   >
                 </div>
 
                 <div class="offer__rating rating">
                   <span class="rating__stars"></span>
-                  <span class="rating__value">Рейтинг: 8,5</span>
+                  <span class="rating__value button button--grey"
+                    >Рейтинг: 8,5</span
+                  >
                 </div>
               </div>
             </article>
@@ -258,22 +273,24 @@
                 <table class="offer__detail">
                   <tr>
                     <td>Гостиница</td>
-                    <td>От 5000 ₽</td>
+                    <td class="offer__price">От 5000 ₽</td>
                   </tr>
                 </table>
 
                 <div class="offer__links">
-                  <a href="#" class="offer__link offer__link--brown"
+                  <a href="#" class="offer__link button button--brown"
                     >Подробнее</a
                   >
-                  <a href="#" class="offer__link offer__link--green"
+                  <a href="#" class="offer__link button button--green"
                     >В избранном</a
                   >
                 </div>
 
                 <div class="offer__rating rating">
                   <span class="rating__stars"></span>
-                  <span class="rating__value">Рейтинг: 9,2</span>
+                  <span class="rating__value button button--grey"
+                    >Рейтинг: 9,2</span
+                  >
                 </div>
               </div>
             </article>
@@ -293,22 +310,24 @@
                 <table class="offer__detail">
                   <tr>
                     <td>Гостиница</td>
-                    <td>От 2500 ₽</td>
+                    <td class="offer__price">От 2500 ₽</td>
                   </tr>
                 </table>
 
                 <div class="offer__links">
-                  <a href="#" class="offer__link offer__link--brown"
+                  <a href="#" class="offer__link button button--brown"
                     >Подробнее</a
                   >
-                  <a href="#" class="offer__link offer__link--blue"
+                  <a href="#" class="offer__link button button--blue"
                     >В избранноe</a
                   >
                 </div>
 
                 <div class="offer__rating rating">
                   <span class="rating__stars"></span>
-                  <span class="rating__value">Рейтинг: 6,9</span>
+                  <span class="rating__value button button--grey"
+                    >Рейтинг: 6,9</span
+                  >
                 </div>
               </div>
             </article>
@@ -328,22 +347,24 @@
                 <table class="offer__detail">
                   <tr>
                     <td>Гостиница</td>
-                    <td>От 1500 ₽</td>
+                    <td class="offer__price">От 1500 ₽</td>
                   </tr>
                 </table>
 
                 <div class="offer__links">
-                  <a href="#" class="offer__link offer__link--brown"
+                  <a href="#" class="offer__link button button--brown"
                     >Подробнее</a
                   >
-                  <a href="#" class="offer__link offer__link--blue"
+                  <a href="#" class="offer__link button button--blue"
                     >В избранноe</a
                   >
                 </div>
 
                 <div class="offer__rating rating">
                   <span class="rating__stars"></span>
-                  <span class="rating__value">Рейтинг: 5,0</span>
+                  <span class="rating__value button button--grey"
+                    >Рейтинг: 5,0</span
+                  >
                 </div>
               </div>
             </article>
@@ -369,8 +390,8 @@
             <a href="#" class="pagination__link">4</a>
           </li>
 
-          <li class="pagination__item">
-            <span class="pagination__link pagination__link--space">...</span>
+          <li class="pagination__item pagination__item--space">
+            <span class="pagination__link">...</span>
           </li>
 
           <li class="pagination__item">
@@ -395,10 +416,14 @@
         >
           <input
             type="email"
+            name="email"
             class="subscribe__input"
             placeholder="Ваш e-mail"
+            autocomplete="email"
           />
-          <button type="submit" class="subscribe__button">Подписаться</button>
+          <button type="submit" class="subscribe__button button button--blue">
+            Подписаться
+          </button>
         </form>
       </section>
 
