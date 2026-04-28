@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Sedona</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header class="page-header">
@@ -31,7 +32,7 @@
 
           <ul class="navigation__list navigation__list--user">
             <li class="navigation__item">
-              <a class="navigation__link">
+              <a href="#" class="navigation__link">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
@@ -42,7 +43,9 @@
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Хочу сюда!</a>
+              <a href="#" class="navigation__link button button--brown"
+                >Хочу сюда!</a
+              >
             </li>
           </ul>
         </nav>
@@ -71,15 +74,15 @@
       </div>
 
       <section class="page-main__features features">
-        <h2 class="features__title">Почему Седона круче, чем Гранд-Каньон?</h2>
+        <h2 class="features__title visually-hidden">
+          Почему Седона круче, чем Гранд-Каньон?
+        </h2>
 
         <ul class="features__list">
           <li class="features__item">
             <section class="feature">
               <div class="feature__description">
-                <h3 class="feature__title visually-hidden">
-                  Настоящий городок
-                </h3>
+                <h3 class="feature__title">Настоящий городок</h3>
                 <p class="feature__text">
                   Седона — не аттракцион для туристов, там течёт своя жизнь
                 </p>
@@ -100,9 +103,7 @@
           <li class="features__item">
             <section class="feature">
               <div class="feature__description">
-                <h3 class="feature__title visually-hidden">
-                  Небольшая площадь
-                </h3>
+                <h3 class="feature__title">Небольшая площадь</h3>
                 <p class="feature__text">
                   Все достопримечательности находятся очень близко
                 </p>
@@ -132,7 +133,7 @@
             </section>
           </li>
 
-          <li class="feature__item">
+          <li class="features__item">
             <section class="feature">
               <div class="feature__image">
                 <img
@@ -217,12 +218,14 @@
           предложения гостиниц в Седоне
         </p>
 
-        <a href="#" class="offer__link">Поиск гостиницы в седоне</a>
+        <a href="#" class="offer__link button button--brown"
+          >Поиск гостиницы в седоне</a
+        >
       </div>
     </main>
 
     <footer class="page-footer">
-      <section class="page-footer__subscribe subscribe">
+      <section class="page-footer__subscribe subscribe subscribe--with-bg">
         <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
 
         <p class="subscribe__text">
@@ -236,10 +239,14 @@
         >
           <input
             type="email"
+            name="email"
             class="subscribe__input"
             placeholder="Ваш e-mail"
+            autocomplete="email"
           />
-          <button type="submit" class="subscribe__button">Подписаться</button>
+          <button type="submit" class="subscribe__button button button--blue">
+            Подписаться
+          </button>
         </form>
       </section>
 
