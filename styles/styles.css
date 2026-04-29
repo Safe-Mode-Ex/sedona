@@ -150,15 +150,15 @@ h1 {
 }
 
 .features__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .features__item {
-  width: calc(100% / 3);
+  grid-column: span 1;
   text-align: center;
 }
 
@@ -172,9 +172,14 @@ h1 {
 
 .features__item:first-child,
 .features__item:last-child {
+  grid-column: 1 / -1;
   width: 100%;
   color: #ffffff;
   background-color: var(--blue-bg);
+}
+
+.feature {
+  display: flex;
 }
 
 .feature__title {
@@ -182,6 +187,10 @@ h1 {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+}
+
+.feature__description {
+  min-height: 385px;
 }
 
 .feature__text {
