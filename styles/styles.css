@@ -25,13 +25,21 @@
   --lh-h2: 36px;
 }
 
+html {
+  background-color: var(--grey-bg);
+}
+
 body {
+  margin: 0 auto;
+  max-width: 1200px;
+
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
 
   background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -41,6 +49,7 @@ h1 {
 }
 
 .button {
+  font: inherit;
   color: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -92,6 +101,8 @@ h1 {
 
 .banner {
   color: #ffffff;
+  text-align: center;
+
   background-color: var(--light-blue-bg);
   background-image: url("../images/backkgrounds/bg-welcome.jpg");
   background-repeat: no-repeat;
@@ -113,20 +124,22 @@ h1 {
   text-transform: uppercase;
 }
 
-.feature__description {
-  color: #000000;
-  background-color: var(--light-blue-bg);
+.features__item {
   text-align: center;
 }
 
-.features__item:first-child .feature__description,
-.features__item:last-child .feature__description {
-  color: #ffffff;
-  background-color: var(--blue-bg);
+.features__item:nth-child(2n) {
+  background-color: var(--light-blue-bg);
 }
 
-.features__item:nth-child(3) .feature__description {
+.features__item:nth-child(2n-1) {
   background-color: rgba(131, 179, 211, 0.2);
+}
+
+.features__item:first-child,
+.features__item:last-child {
+  color: #ffffff;
+  background-color: var(--blue-bg);
 }
 
 .feature__title {
@@ -201,6 +214,7 @@ h1 {
 }
 
 .subscribe__input {
+  font: inherit;
   font-size: 18px;
   line-height: 24px;
 }
@@ -266,6 +280,7 @@ h1 {
 }
 
 .filter__price input {
+  font: inherit;
   font-weight: 700;
   font-size: inherit;
 }
@@ -285,6 +300,7 @@ h1 {
 }
 
 .handling__sort {
+  font: inherit;
   color: var(--color-secondary);
 }
 
