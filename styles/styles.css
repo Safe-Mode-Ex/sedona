@@ -26,12 +26,16 @@
 }
 
 html {
+  height: 100%;
   background-color: var(--grey-bg);
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 1200px;
+  min-height: 100%;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -46,6 +50,15 @@ h1 {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+}
+
+.page-main {
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1060px;
 }
 
 .button {
@@ -83,9 +96,18 @@ h1 {
   background-color: var(--grey-bg);
 }
 
+.navigation {
+  flex-grow: 1;
+  display: flex;
+}
+
 .navigation__list {
   margin: 0;
   padding: 0;
+}
+
+.navigation__list--user {
+  margin-left: auto;
 }
 
 .navigation__item {
@@ -117,6 +139,9 @@ h1 {
 }
 
 .promo__text {
+  margin: 0 auto;
+  max-width: 620px;
+
   font-weight: 700;
   font-size: var(--fz-h2);
   line-height: var(--lh-h2);
@@ -124,7 +149,16 @@ h1 {
   text-transform: uppercase;
 }
 
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .features__item {
+  width: calc(100% / 3);
   text-align: center;
 }
 
@@ -138,6 +172,7 @@ h1 {
 
 .features__item:first-child,
 .features__item:last-child {
+  width: 100%;
   color: #ffffff;
   background-color: var(--blue-bg);
 }
@@ -151,12 +186,6 @@ h1 {
 
 .feature__text {
   vertical-align: middle;
-}
-
-.features__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .facilities__list {
@@ -364,4 +393,19 @@ h1 {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+}
+
+.page-header__container {
+  display: flex;
+}
+
+.page-header__logo {
+  margin-right: 30px;
+}
+
+.page-footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
