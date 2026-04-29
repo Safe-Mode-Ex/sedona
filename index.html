@@ -7,15 +7,17 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="logo">
-        <a class="logo__link">
-          <img
-            src="images/logo.svg"
-            width="140"
-            height="70"
-            alt="Логотип Седона"
-          />
-        </a>
+      <div class="page-header__container container">
+        <div class="page-header__logo logo">
+          <a class="logo__link">
+            <img
+              src="images/logo.svg"
+              width="140"
+              height="70"
+              alt="Логотип Седона"
+            />
+          </a>
+        </div>
 
         <nav class="page-header__navigation navigation">
           <ul class="navigation__list">
@@ -160,7 +162,7 @@
 
       <div class="page-main__promo promo">
         <p class="promo__text">
-          <b>Приезжайте в Седону отдохнуть в комфорте и уюте!</b>
+          <b>Приезжайте в Седону отдохнуть в&nbsp;комфорте и уюте!</b>
         </p>
 
         <p>Опытный персонал и качественное обслуживание!</p>
@@ -226,76 +228,80 @@
 
     <footer class="page-footer">
       <section class="page-footer__subscribe subscribe subscribe--with-bg">
-        <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
+        <div class="container subscribe__container">
+          <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
 
-        <p class="subscribe__text">
-          Только полезная информация и никакого спама, честное бойскаутское!
-        </p>
+          <p class="subscribe__text">
+            Только полезная информация и никакого спама, честное бойскаутское!
+          </p>
 
-        <form
-          class="subscribe__form"
-          action="https://echo.htmlacademy.ru/"
-          method="post"
-        >
-          <input
-            type="email"
-            name="email"
-            class="subscribe__input"
-            placeholder="Ваш e-mail"
-            autocomplete="email"
-          />
-          <button type="submit" class="subscribe__button button button--blue">
-            Подписаться
-          </button>
-        </form>
+          <form
+            class="subscribe__form"
+            action="https://echo.htmlacademy.ru/"
+            method="post"
+          >
+            <input
+              type="email"
+              name="email"
+              class="subscribe__input"
+              placeholder="Ваш e-mail"
+              autocomplete="email"
+            />
+            <button type="submit" class="subscribe__button button button--blue">
+              Подписаться
+            </button>
+          </form>
+        </div>
       </section>
 
-      <section class="page-footer__social social">
-        <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
+      <div class="page-footer__container container">
+        <section class="page-footer__social social">
+          <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
 
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="#" class="social__link">
-              <span class="visually-hidden">ВК</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link">
-              <span class="visually-hidden">Телеграмм</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link">
-              <span class="visually-hidden">YouTube</span>
-            </a>
-          </li>
-        </ul>
-      </section>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <span class="visually-hidden">ВК</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <span class="visually-hidden">Телеграмм</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <span class="visually-hidden">YouTube</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-      <section class="page-footer__contacts contacts">
-        <h2 class="contacts__title visually-hidden">Контакты</h2>
+        <section class="page-footer__contacts contacts">
+          <h2 class="contacts__title visually-hidden">Контакты</h2>
 
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <a href="tel:78128121212" class="contacts__link"
-              >+7 (812) 812-12-12</a
-            >
-          </li>
-        </ul>
-      </section>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a href="tel:78128121212" class="contacts__link"
+                >+7 (812) 812-12-12</a
+              >
+            </li>
+          </ul>
+        </section>
 
-      <div class="page-footer__academy academy">
-        <a
-          href="https://htmlacademy.ru/intensive/htmlcss"
-          class="academy__link"
-        >
-          <img
-            src="images/academy.svg"
-            width="115"
-            height="33"
-            alt="HTML Academy логотип"
-          />
-        </a>
+        <div class="page-footer__academy academy">
+          <a
+            href="https://htmlacademy.ru/intensive/htmlcss"
+            class="academy__link"
+          >
+            <img
+              src="images/academy.svg"
+              width="115"
+              height="33"
+              alt="HTML Academy логотип"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   </body>
