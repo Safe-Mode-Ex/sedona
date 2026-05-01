@@ -272,6 +272,8 @@ h1 {
 }
 
 .facilities__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -293,10 +295,21 @@ h1 {
 }
 
 .facilities__item h3 {
+  margin: 0;
+  margin-bottom: 30px;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+}
+
+.facilities__item img {
+  margin-bottom: 30px;
+}
+
+.facilities__item p {
+  margin: 0;
 }
 
 .subscribe {
@@ -527,19 +540,31 @@ h1 {
 }
 
 .offers__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.offers__item {
+  display: grid;
+}
+
 .offer {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
+  border: 1px solid #e6e6e6;
 }
 
 .offer__image img {
   display: block;
   margin-bottom: 16px;
   max-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .offer__title {
@@ -552,20 +577,32 @@ h1 {
 }
 
 .offer__detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 16px;
   color: var(--color-secondary);
 }
 
+.offer__detail dd {
+  margin: 0;
+  text-align: right;
+}
+
+.offer__footer {
+  margin-top: auto;
+}
+
 .offer__links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   margin-bottom: 16px;
 }
 
-.offer__link {
-  width: 140px;
-}
-
-.offer__price {
-  text-align: right;
+.rating {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .rating__value {
