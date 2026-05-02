@@ -17,6 +17,7 @@
 :root {
   --brown-bg: #756157;
   --blue-bg: #82b3d3;
+  --color-blue-hover: #68a2ca;
   --grey-bg: #f2f2f2;
   --green-bg: #7DB54F;
   --color-secondary: #333333;
@@ -92,6 +93,7 @@ h1 {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  vertical-align: middle;
 
   border: none;
   border-radius: var(--btn-border-radius);
@@ -124,7 +126,7 @@ h1 {
 
 .button--blue:hover,
 .button--blue:focus-visible {
-  background-color: #68a2ca;
+  background-color: var(--color-blue-hover);
   outline: none;
 }
 
@@ -368,6 +370,8 @@ h1 {
 }
 
 .feature__description h3 {
+  position: relative;
+
   margin: 0;
   margin-bottom: 62px;
 
@@ -377,7 +381,27 @@ h1 {
   text-transform: uppercase;
 }
 
+.feature__description h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+
+  width: 60px;
+  height: 2px;
+
+  background-color: #000000;
+  opacity: 0.3;
+  transform: translate(-50%);
+}
+
+.features__item:first-child h3::after,
+.features__item:last-child h3::after {
+  background-color: #ffffff;
+}
+
 .feature__description p {
+  margin: 0;
   vertical-align: middle;
 }
 
@@ -469,6 +493,9 @@ h1 {
 .subscribe__link {
   margin-top: 34px;
   min-width: 375px;
+
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .subscribe__form {
@@ -486,14 +513,35 @@ h1 {
 }
 
 .social__list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .social__link {
-  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 40px;
+
+  color: var(--blue-bg);
   text-decoration: none;
+}
+
+.social__link:hover {
+  color: var(--color-blue-hover);
+}
+
+.social__link:focus-visible {
+  color: var(--color-blue-hover);
+  outline: none;
+}
+
+.social__link:active {
+  opacity: 0.3;
 }
 
 .contacts__list {
@@ -507,6 +555,26 @@ h1 {
   line-height: 1;
   color: inherit;
   text-decoration: none;
+}
+
+.academy__link {
+  color: inherit;
+}
+
+.contacts__link:hover,
+.academy__link:hover {
+  color: var(--brown-bg);
+}
+
+.contacts__link:focus-visible,
+.academy__link:focus-visible {
+  color: var(--brown-bg);
+  outline: none;
+}
+
+.contacts__link:active,
+.academy__link:active {
+  opacity: 0.3;
 }
 
 .page-main__header {
