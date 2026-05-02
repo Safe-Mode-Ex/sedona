@@ -847,8 +847,24 @@ h1 {
 }
 
 .rating__stars {
-  display: flex;
-  gap: 6px;
+  margin: 0;
+  height: 17px;
+
+  background-image: url("../images/icons/icon-star.svg");
+  background-size: 24px 17px;
+  background-position: -3px 0;
+}
+
+.rating__stars--2 {
+  width: 42px;
+}
+
+.rating__stars--3 {
+  width: 66px;
+}
+
+.rating__stars--4 {
+  width: 90px;
 }
 
 .rating__value {
