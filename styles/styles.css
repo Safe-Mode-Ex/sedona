@@ -167,6 +167,34 @@ h1 {
   background-color: var(--grey-bg);
 }
 
+.field {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px 20px;
+
+  font: inherit;
+  font-size: 18px;
+  line-height: 24px;
+
+  border: none;
+  border-radius: var(--btn-border-radius);
+  background-color: var(--grey-bg);
+}
+
+.field:hover {
+  background-color: #e6e6e6;
+}
+
+.field:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid var(--blue-bg);
+}
+
+.field::placeholder {
+  font: inherit;
+  opacity: 0.6;
+}
+
 .navigation {
   flex-grow: 1;
   display: flex;
@@ -499,17 +527,26 @@ h1 {
 }
 
 .subscribe__form {
+  display: flex;
+  margin: 0 auto;
   margin-top: 54px;
+  max-width: 684px;
 }
 
-.subscribe__input {
-  font: inherit;
-  font-size: 18px;
-  line-height: 24px;
+.subscribe__field {
+  flex-grow: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .subscribe__button {
   width: 232px;
+
+  font-size: 20px;
+  line-height: 16px;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .social__list {
