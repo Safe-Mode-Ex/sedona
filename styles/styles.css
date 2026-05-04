@@ -739,13 +739,13 @@ h1 {
   background-position: center;
 }
 
-.filter__group {
+.filters__group {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.filter__group--price {
+.filters__group--price {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3px;
@@ -769,20 +769,20 @@ h1 {
   width: 550px;
 }
 
-.filter__title {
+.filters__title {
   margin-bottom: 32px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
-.filter__list {
+.filters__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.filter__item:not(:last-child) {
+.filters__item:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -849,7 +849,7 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
-.filter__field {
+.filters__field {
   box-sizing: border-box;
   padding-right: 45px;
   width: 143px;
@@ -860,27 +860,27 @@ h1 {
   appearance: textfield;
 }
 
-.filter__field::-webkit-outer-spin-button,
-.filter__field::-webkit-inner-spin-button {
+.filters__field::-webkit-outer-spin-button,
+.filters__field::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
 
-.filter__field--min {
+.filters__field--min {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.filter__field--max {
+.filters__field--max {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.filter__price {
+.filters__price {
   position: relative;
 }
 
-.filter__price span {
+.filters__price span {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -928,13 +928,34 @@ h1 {
 
 .handling__sort {
   margin-right: 70px;
-  padding: 11px 20px;
+  padding: 12px 20px;
+  width: 292px;
 
   font: inherit;
   color: var(--color-secondary);
 
   border: var(--border-handling);
   border-radius: var(--btn-border-radius);
+  appearance: none;
+  cursor: pointer;
+  background-image: url(../images/icons/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+}
+
+.handling__sort:hover {
+  border-color: var(--color-blue-hover);
+}
+
+.handling__sort:focus-visible {
+  outline: none;
+  border-color: var(--color-blue-hover);
+}
+
+.handling__sort:disabled {
+  border-color: #000000;
+  opacity: 0.3;
+  cursor: initial;
 }
 
 .handling__view {
