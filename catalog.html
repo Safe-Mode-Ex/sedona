@@ -92,7 +92,7 @@
                         <input
                           type="checkbox"
                           name="pool"
-                          class="control__input"
+                          class="control__input control__input--checkbox"
                           checked
                         />
                         <span class="control__title">Бассейн</span>
@@ -103,7 +103,7 @@
                         <input
                           type="checkbox"
                           name="parking"
-                          class="control__input"
+                          class="control__input control__input--checkbox"
                           checked
                         />
                         <span class="control__title">Парковка</span>
@@ -114,7 +114,7 @@
                         <input
                           type="checkbox"
                           name="wi-fi"
-                          class="control__input"
+                          class="control__input control__input--checkbox"
                         />
                         <span class="control__title">Wi-Fi</span>
                       </label>
@@ -132,7 +132,7 @@
                           type="radio"
                           name="housing-type"
                           value="hotel"
-                          class="control__input"
+                          class="control__input control__input--radio"
                           checked
                         />
                         <span class="control__title">Гостиница</span>
@@ -144,7 +144,7 @@
                           type="radio"
                           name="housing-type"
                           value="motel"
-                          class="control__input"
+                          class="control__input control__input--radio"
                         />
                         <span class="control__title">Мотель</span>
                       </label>
@@ -155,7 +155,7 @@
                           type="radio"
                           name="housing-type"
                           value="apartments"
-                          class="control__input"
+                          class="control__input control__input--radio"
                         />
                         <span class="control__title">Апартаменты</span>
                       </label>
@@ -165,11 +165,12 @@
               </div>
 
               <div class="filters__column filters__column--right">
-                <fieldset class="filter__group">
+                <fieldset class="filter__group filter__group--price">
                   <legend class="filter__title">Стоимость, &#8381;</legend>
 
                   <label for="price-min" class="filter__price">
                     <input
+                      class="filter__field filter__field--min field"
                       type="number"
                       id="price-min"
                       name="price-min"
@@ -180,6 +181,7 @@
 
                   <label for="price-max" class="filter__price">
                     <input
+                      class="filter__field filter__field--max field"
                       type="number"
                       id="price-max"
                       name="price-max"
@@ -188,7 +190,28 @@
                     <span>до</span>
                   </label>
 
-                  <input type="range" />
+                  <div class="filters__range range">
+                    <div class="range__track"></div>
+                    <div class="range__controls" style="left: 0; right: 61px">
+                      <button
+                        type="button"
+                        class="range__toggle range__toggle--min"
+                      >
+                        <span class="visually-hidden"
+                          >Изменить минимальную цену</span
+                        >
+                      </button>
+
+                      <button
+                        type="button"
+                        class="range__toggle range__toggle--max"
+                      >
+                        <span class="visually-hidden"
+                          >Изменить максимальную цену</span
+                        >
+                      </button>
+                    </div>
+                  </div>
                 </fieldset>
 
                 <div class="filters__buttons">
