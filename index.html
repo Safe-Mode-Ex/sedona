@@ -417,9 +417,20 @@
             </label>
 
             <div class="hotel-search__tooltip tooltip">
-              <button class="tooltip__button button button--blue" type="button">
+              <button
+                class="tooltip__button button button--blue"
+                type="button"
+                popovertarget="infoPopover"
+              >
                 <span class="visually-hidden">Показать доп инфо</span>
               </button>
+
+              <div class="tooltip__content" id="infoPopover" popover>
+                <p>
+                  Укажите количество детей, которые будут с вами, возраст
+                  которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                </p>
+              </div>
             </div>
           </div>
 
