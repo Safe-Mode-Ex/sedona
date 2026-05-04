@@ -239,6 +239,21 @@ h1 {
   border: none;
   border-radius: var(--btn-border-radius);
   transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.range__toggle:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range__toggle:focus {
+  outline: 3px solid var(--blue-bg);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range__toggle:active {
+  outline-width: 2px;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
 .range__toggle--min {
