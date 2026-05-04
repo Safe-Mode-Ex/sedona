@@ -5,6 +5,7 @@
     <title>HTML Academy: Sedona</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" href="favicon.ico" sizes="32x32" />
+    <script type="module" src="scripts/scripts.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -214,7 +215,10 @@
           предложения гостиниц в Седоне
         </p>
 
-        <a href="#" class="subscribe__link button button--brown"
+        <a
+          href="#"
+          class="subscribe__link button button--brown"
+          id="hotel-search-btn"
           >Поиск гостиницы в седоне</a
         >
       </div>
@@ -238,7 +242,7 @@
             <input
               type="email"
               name="email"
-              class="subscribe__input"
+              class="subscribe__field field"
               placeholder="Ваш e-mail"
               autocomplete="email"
             />
@@ -350,5 +354,132 @@
         </div>
       </div>
     </footer>
+
+    <dialog id="hotel-search-dialog" class="modal" closedby="any">
+      <button
+        class="modal__close button button--grey"
+        type="button"
+        id="close-button"
+      >
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
+
+      <div class="hotel-search">
+        <h2 class="hotel-search__title">Поиск гостиницы в Седоне</h2>
+
+        <form
+          class="hotel-search__form"
+          method="post"
+          action="https://echo.htmlacademy.ru/"
+        >
+          <label for="checkin-date" class="hotel-search__label"
+            >Дата заезда:</label
+          >
+          <div class="hotel-search__date">
+            <input
+              type="text"
+              id="checkin-date"
+              name="checkin-date"
+              class="hotel-search__field field"
+              placeholder="Укажите дату"
+              required
+            />
+          </div>
+
+          <p
+            class="hotel-search__notification notification notification--error"
+          >
+            Мы не можем отправить вас в прошлое.
+          </p>
+
+          <label for="checkout-date" class="hotel-search__label"
+            >Дата выезда:</label
+          >
+          <div class="hotel-search__date">
+            <input
+              type="text"
+              id="checkout-date"
+              name="checkout-date"
+              class="hotel-search__field field"
+              placeholder="Укажите дату"
+            />
+          </div>
+
+          <p class="hotel-search__notification notification">
+            На эти даты есть свободные номера. Пока есть.
+          </p>
+
+          <label for="adults" class="hotel-search__label">Взрослые:</label>
+          <p class="hotel-search__count">
+            <button class="hotel-search__dec button button--grey" type="button">
+              <span class="visually-hidden">Уменьшить количество</span>
+              <span class="hotel-search__indicator"></span>
+            </button>
+            <input
+              type="number"
+              name="adults"
+              id="adults"
+              value="2"
+              class="hotel-search__field field"
+            />
+            <button class="hotel-search__inc button button--grey" type="button">
+              <span class="visually-hidden">Увеличить количество</span>
+              <span class="hotel-search__indicator"></span>
+            </button>
+          </p>
+
+          <div class="hotel-search__wrapper">
+            <label
+              for="children"
+              class="hotel-search__label hotel-search__label--with-tooltip"
+            >
+              Дети:
+            </label>
+
+            <div class="hotel-search__tooltip tooltip">
+              <button
+                class="tooltip__button button button--blue"
+                type="button"
+                popovertarget="infoPopover"
+              >
+                <span class="visually-hidden">Показать доп инфо</span>
+              </button>
+
+              <div class="tooltip__content" id="infoPopover" popover>
+                <p>
+                  Укажите количество детей, которые будут с вами, возраст
+                  которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="hotel-search__count hotel-search__count--end">
+            <button class="hotel-search__dec button button--grey" type="button">
+              <span class="visually-hidden">Уменьшить количество</span>
+              <span class="hotel-search__indicator"></span>
+            </button>
+            <input
+              type="number"
+              name="children"
+              id="children"
+              value="2"
+              class="hotel-search__field field"
+            />
+            <button class="hotel-search__inc button button--grey" type="button">
+              <span class="visually-hidden">Увеличить количество</span>
+              <span class="hotel-search__indicator"></span>
+            </button>
+          </p>
+
+          <button
+            class="hotel-search__button button button--blue"
+            type="submit"
+          >
+            Найти
+          </button>
+        </form>
+      </div>
+    </dialog>
   </body>
 </html>
