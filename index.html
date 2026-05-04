@@ -214,7 +214,10 @@
           предложения гостиниц в Седоне
         </p>
 
-        <a href="#" class="subscribe__link button button--brown"
+        <a
+          href="#"
+          class="subscribe__link button button--brown"
+          id="hotelSearchBtn"
           >Поиск гостиницы в седоне</a
         >
       </div>
@@ -350,5 +353,119 @@
         </div>
       </div>
     </footer>
+
+    <dialog id="hotelSearchDialog" class="modal">
+      <div class="hotel-search">
+        <h2 class="hotel-search__title">Поиск гостиницы в Седоне</h2>
+
+        <form
+          class="hotel-search__form"
+          method="post"
+          action="https://echo.htmlacademy.ru/"
+        >
+          <label for="checkin-date" class="hotel-search__label"
+            >Дата заезда:</label
+          >
+          <p class="hotel-search__date">
+            <input
+              type="text"
+              id="checkin-date"
+              name="checkin-date"
+              class="hotel-search__field field"
+              placeholder="Укажите дату"
+            />
+          </p>
+
+          <label for="checkout-date" class="hotel-search__label"
+            >Дата выезда:</label
+          >
+          <p class="hotel-search__date">
+            <input
+              type="text"
+              id="checkout-date"
+              name="checkout-date"
+              class="hotel-search__field field"
+              placeholder="Укажите дату"
+            />
+          </p>
+
+          <label for="adults" class="hotel-search__label">Взрослые:</label>
+          <p class="hotel-search__count">
+            <button class="hotel-search__dec button button--grey" type="button">
+              <span class="visually-hidden">Уменьшить количество</span>
+              <span class="hotel-search__indicator"></span>
+            </button>
+            <input
+              type="number"
+              name="adults"
+              id="adults"
+              value="2"
+              class="hotel-search__field field"
+            />
+            <button class="hotel-search__inc button button--grey" type="button">
+              <span class="visually-hidden">Увеличить количество</span>
+              <span class="hotel-search__indicator"></span>
+            </button>
+          </p>
+
+          <div class="hotel-search__wrapper">
+            <label
+              for="children"
+              class="hotel-search__label hotel-search__label--with-tooltip"
+            >
+              Дети:
+            </label>
+
+            <div class="hotel-search__tooltip tooltip">
+              <button class="tooltip__button button button--blue" type="button">
+                <span class="visually-hidden">Показать доп инфо</span>
+              </button>
+            </div>
+          </div>
+
+          <p class="hotel-search__count hotel-search__count--end">
+            <button class="hotel-search__dec button button--grey" type="button">
+              <span class="visually-hidden">Уменьшить количество</span>
+              <span class="hotel-search__indicator"></span>
+            </button>
+            <input
+              type="number"
+              name="children"
+              id="children"
+              value="2"
+              class="hotel-search__field field"
+            />
+            <button class="hotel-search__inc button button--grey" type="button">
+              <span class="visually-hidden">Увеличить количество</span>
+              <span class="hotel-search__indicator"></span>
+            </button>
+          </p>
+
+          <button
+            class="hotel-search__button button button--blue"
+            type="submit"
+          >
+            Найти
+          </button>
+        </form>
+      </div>
+    </dialog>
+
+    <script>
+      (function () {
+        const hotelSearchBtnEl = document.getElementById("hotelSearchBtn");
+        const hotelSearchDialogEl =
+          document.getElementById("hotelSearchDialog");
+
+        hotelSearchBtnEl.addEventListener("click", (evt) => {
+          evt.preventDefault();
+          hotelSearchDialog.showModal();
+        });
+
+        // cancelButton.addEventListener("click", function () {
+        //   favDialog.close();
+        // });
+      })();
+    </script>
   </body>
 </html>
