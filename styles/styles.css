@@ -1195,9 +1195,49 @@ h1 {
   background: rgba(242, 242, 242, 0.8);
 }
 
+.modal__close {
+  position: absolute;
+  top: 64px;
+  right: 52px;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+}
+
+.modal__close:hover {
+  background-color: var(--color-grey-hover);
+}
+
+.modal__close:focus {
+  background-color: var(--color-grey-hover);
+  outline: 3px solid var(--blue-bg);
+}
+
+.modal__close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 20px;
+  height: 20px;
+
+  transform: translate(-50%, -50%);
+  background-image: url("../images/icons/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal__close:active::before {
+  opacity: 0.3;
+}
+
 .hotel-search__title {
   margin: 0;
   margin-bottom: 64px;
+  padding-right: 40px;
 
   font-size: 30px;
   line-height: 36px;

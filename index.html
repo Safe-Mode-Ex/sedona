@@ -217,7 +217,7 @@
         <a
           href="#"
           class="subscribe__link button button--brown"
-          id="hotelSearchBtn"
+          id="hotel-search-btn"
           >Поиск гостиницы в седоне</a
         >
       </div>
@@ -354,7 +354,15 @@
       </div>
     </footer>
 
-    <dialog id="hotelSearchDialog" class="modal">
+    <dialog id="hotel-search-dialog" class="modal" closedby="any">
+      <button
+        class="modal__close button button--grey"
+        type="button"
+        id="close-button"
+      >
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
+
       <div class="hotel-search">
         <h2 class="hotel-search__title">Поиск гостиницы в Седоне</h2>
 
@@ -464,18 +472,27 @@
 
     <script>
       (function () {
-        const hotelSearchBtnEl = document.getElementById("hotelSearchBtn");
-        const hotelSearchDialogEl =
-          document.getElementById("hotelSearchDialog");
+        const hotelSearchBtnEl = document.querySelector("#hotel-search-btn");
+        const hotelSearchDialogEl = document.querySelector(
+          "#hotel-search-dialog",
+        );
+        const closeButtonEl = document.querySelector("#close-button");
 
-        hotelSearchBtnEl.addEventListener("click", (evt) => {
+        const openModal = (evt) => {
           evt.preventDefault();
-          hotelSearchDialog.showModal();
-        });
 
-        // cancelButton.addEventListener("click", function () {
-        //   favDialog.close();
-        // });
+          hotelSearchDialogEl.showModal();
+          closeButtonEl.addEventListener("click", closeModal);
+        };
+
+        const closeModal = (evt) => {
+          evt.preventDefault();
+
+          hotelSearchDialogEl.close();
+          closeButtonEl.removeEventListener("click", closeModal);
+        };
+
+        hotelSearchBtnEl.addEventListener("click", openModal);
       })();
     </script>
   </body>
