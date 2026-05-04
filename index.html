@@ -375,20 +375,27 @@
           <label for="checkin-date" class="hotel-search__label"
             >Дата заезда:</label
           >
-          <p class="hotel-search__date">
+          <div class="hotel-search__date">
             <input
               type="text"
               id="checkin-date"
               name="checkin-date"
               class="hotel-search__field field"
               placeholder="Укажите дату"
+              required
             />
+          </div>
+
+          <p
+            class="hotel-search__notification notification notification--error"
+          >
+            Мы не можем отправить вас в прошлое.
           </p>
 
           <label for="checkout-date" class="hotel-search__label"
             >Дата выезда:</label
           >
-          <p class="hotel-search__date">
+          <div class="hotel-search__date">
             <input
               type="text"
               id="checkout-date"
@@ -396,6 +403,10 @@
               class="hotel-search__field field"
               placeholder="Укажите дату"
             />
+          </div>
+
+          <p class="hotel-search__notification notification">
+            На эти даты есть свободные номера. Пока есть.
           </p>
 
           <label for="adults" class="hotel-search__label">Взрослые:</label>

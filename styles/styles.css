@@ -526,7 +526,7 @@ h1 {
   align-items: center;
   padding: 80px 85px;
 
-  color: #333333;
+  color: var(--color-secondary);
   text-align: center;
 }
 
@@ -1247,9 +1247,9 @@ h1 {
 
 .hotel-search__form {
   display: grid;
-  grid-template-columns: max-content 180px max-content 142px;
+  grid-template-columns: 119px 180px min-content 142px;
   column-gap: 18px;
-  row-gap: 48px;
+  row-gap: 4px;
   align-items: center;
 }
 
@@ -1397,6 +1397,7 @@ h1 {
 
 .hotel-search__button {
   grid-column: 1 / -1;
+  margin-top: 44px;
   min-height: 60px;
 
   font-weight: 700;
@@ -1406,6 +1407,11 @@ h1 {
 
 .hotel-search__tooltip {
   margin-left: 8px;
+}
+
+.hotel-search__notification {
+  grid-column: 2 / -1;
+  min-height: 40px;
 }
 
 .tooltip {
@@ -1444,7 +1450,7 @@ h1 {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  background-color: #333333;
+  background-color: var(--color-secondary);
   border-radius: 10px;
 }
 
@@ -1458,6 +1464,18 @@ h1 {
   height: 0;
 
   border: 9px solid transparent;
-  border-bottom-color: #333333;
+  border-bottom-color: var(--color-secondary);
   transform: translate(-50%, -100%);
+}
+
+.notification {
+  margin: 0;
+  padding: 0 20px;
+
+  font-size: 16px;
+  color: var(--color-secondary);
+}
+
+.notification--error {
+  color: #ff5757;
 }
