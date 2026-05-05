@@ -373,7 +373,7 @@ img {
   text-align: center;
 
   background-color: var(--light-blue-bg);
-  background-image: url("../images/backkgrounds/bg-welcome.jpg");
+  background-image: url("../images/backgrounds/bg-welcome.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -569,7 +569,7 @@ img {
 .subscribe--with-bg {
   color: #ffffff;
   background-color: var(--blue-bg);
-  background-image: url("../images/backkgrounds/bg-subscribe.jpg");
+  background-image: url("../images/backgrounds/bg-subscribe.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -705,7 +705,7 @@ img {
 .page-main__header--catalog {
   color: #ffffff;
   background-color: var(--blue-bg);
-  background-image: url("../images/backkgrounds/bg-filter.jpg");
+  background-image: url("../images/backgrounds/bg-filter.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
