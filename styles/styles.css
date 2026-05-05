@@ -367,7 +367,7 @@ img {
   position: relative;
 
   padding: 51px;
-  padding-bottom: 82px;
+  padding-bottom: 79px;
 
   color: #ffffff;
   text-align: center;
@@ -401,17 +401,22 @@ img {
 }
 
 .promo--big {
-  padding-top: 69px;
+  margin-bottom: 21px;
+  padding-top: 67px;
   padding-bottom: 69px;
 }
 
 .promo p {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .promo p:last-child {
   margin-bottom: 0;
+}
+
+.promo--big p {
+  margin-bottom: 25px;
 }
 
 .promo__text {
@@ -541,6 +546,29 @@ img {
   background-color: var(--light-blue-bg);
 }
 
+.facilities__item::before {
+  content: "";
+  display: block;
+  margin-bottom: 22px;
+  width: 80px;
+  height: 80px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.facilities__item--house::before {
+  background-image: url("../images/facilities/house.svg");
+}
+
+.facilities__item--food::before {
+  background-image: url("../images/facilities/food.svg");
+}
+
+.facilities__item--gifts::before {
+  background-image: url("../images/facilities/gift.svg");
+}
+
 .facilities__item h3 {
   margin: 0;
   margin-bottom: 22px;
@@ -549,10 +577,6 @@ img {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-}
-
-.facilities__item img {
-  margin-bottom: 30px;
 }
 
 .facilities__item p {
@@ -600,7 +624,7 @@ img {
 }
 
 .subscribe__link {
-  margin-top: 34px;
+  margin-top: 36px;
   min-width: 375px;
 
   font-size: 20px;
@@ -610,7 +634,7 @@ img {
 .subscribe__form {
   display: flex;
   margin: 0 auto;
-  margin-top: 54px;
+  margin-top: 55px;
   max-width: 684px;
 }
 
@@ -1179,6 +1203,10 @@ img {
   align-items: center;
   padding-top: 45px;
   padding-bottom: 35px;
+}
+
+.page-footer__subscribe {
+  padding-bottom: 104px;
 }
 
 .modal {
