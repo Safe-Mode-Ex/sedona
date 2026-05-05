@@ -20,7 +20,7 @@
   --color-blue-hover: #68a2ca;
   --color-grey-hover: #e6e6e6;
   --grey-bg: #f2f2f2;
-  --green-bg: #7DB54F;
+  --green-bg: #7db54f;
   --color-secondary: #333333;
   --light-blue-bg: rgba(131, 179, 211, 0.12);
   --fz-h2: 30px;
@@ -193,7 +193,7 @@ img {
 }
 
 .field:focus-visible {
-  background-color: var(--color-grey-hover);;
+  background-color: var(--color-grey-hover);
   outline: 3px solid var(--blue-bg);
 }
 
@@ -334,11 +334,11 @@ img {
 }
 
 .navigation__link--search {
-  background-image: url(../images/icons/icon-search.svg);
+  background-image: url("../images/icons/icon-search.svg");
 }
 
 .navigation__link--favorites {
-  background-image: url(../images/icons/icon-favorite.svg);
+  background-image: url("../images/icons/icon-favorite.svg");
 }
 
 .navigation__button {
@@ -989,7 +989,7 @@ img {
   border-radius: var(--btn-border-radius);
   appearance: none;
   cursor: pointer;
-  background-image: url(../images/icons/icon-arrow-down.svg);
+  background-image: url("../images/icons/icon-arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 18px center;
 }
@@ -1366,7 +1366,7 @@ img {
   width: 14px;
   height: 2px;
 
-  background-color: currentColor;
+  background-color: currentcolor;
   transform: translate(-50%, -50%);
 }
 
@@ -1379,7 +1379,7 @@ img {
   width: 14px;
   height: 2px;
 
-  background-color: currentColor;
+  background-color: currentcolor;
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
