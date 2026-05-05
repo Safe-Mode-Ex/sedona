@@ -68,6 +68,10 @@ h1 {
   line-height: 78px;
 }
 
+img {
+  max-width: 100%;
+}
+
 .page-main {
   flex-grow: 1;
 }
@@ -1124,12 +1128,10 @@ h1 {
   color: #ffffff;
 }
 
-.pagination__item--current {
-  color: inherit;
-}
-
+.pagination__item--current,
 .pagination__item--space {
   color: inherit;
+  pointer-events: none;
 }
 
 .pagination__link {
@@ -1144,14 +1146,6 @@ h1 {
   text-decoration: none;
   vertical-align: middle;
   text-transform: uppercase;
-}
-
-.pagination__item--current .pagination__link:active {
-  color: inherit;
-}
-
-.pagination__link:not([href]) {
-  cursor: auto;
 }
 
 .pagination__item--space .pagination__link {
