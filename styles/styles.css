@@ -721,7 +721,7 @@ img {
 }
 
 .page-main__header {
-  margin-bottom: 50px;
+  margin-bottom: 49px;
   padding-top: 35px;
   padding-bottom: 70px;
 }
@@ -816,7 +816,7 @@ img {
 }
 
 .filters__column--left {
-  width: 370px;
+  width: 360px;
 }
 
 .filters__column--right {
@@ -828,6 +828,7 @@ img {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  text-transform: capitalize;
 }
 
 .filters__list {
@@ -837,7 +838,7 @@ img {
 }
 
 .filters__item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .control {
@@ -958,7 +959,7 @@ img {
 }
 
 .filters__button:last-child {
-  margin-top: 27px;
+  margin-top: 26px;
 }
 
 .handling {
@@ -1047,7 +1048,7 @@ img {
 }
 
 .offers {
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 .offers__list {
@@ -1074,8 +1075,7 @@ img {
 
 .offer__image img {
   display: block;
-  margin-bottom: 16px;
-  max-width: 100%;
+  margin-bottom: 15px;
   object-fit: cover;
   object-position: center;
 }
@@ -1176,14 +1176,12 @@ img {
   color: inherit;
   text-align: center;
   text-decoration: none;
-  vertical-align: middle;
   text-transform: uppercase;
 }
 
 .pagination__item--space .pagination__link {
   font-weight: 400;
   font-size: 22px;
-  line-height: 26px;
 }
 
 .page-header__container {
