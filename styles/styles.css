@@ -99,6 +99,8 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
+  word-break: normal;
+  overflow-wrap: anywhere;
 
   border: none;
   border-radius: var(--btn-border-radius);
@@ -478,7 +480,7 @@ img {
   position: relative;
 
   margin: 0;
-  margin-bottom: 62px;
+  margin-bottom: 38px;
 
   font-weight: 700;
   font-size: 24px;
@@ -507,6 +509,7 @@ img {
 
 .feature__description p {
   margin: 0;
+  margin-top: 24px;
   vertical-align: middle;
 }
 
@@ -540,7 +543,7 @@ img {
 
 .facilities__item h3 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 
   font-weight: 700;
   font-size: 24px;
@@ -554,6 +557,7 @@ img {
 
 .facilities__item p {
   margin: 0;
+  margin-top: 8px;
 }
 
 .subscribe {
@@ -620,7 +624,7 @@ img {
   width: 232px;
 
   font-size: 20px;
-  line-height: 16px;
+  line-height: 36px;
 
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -631,6 +635,7 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  max-width: 141px;
   list-style: none;
 }
 
@@ -720,6 +725,7 @@ img {
 
 .breadcrumbs__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -761,6 +767,11 @@ img {
 .filters__group {
   margin: 0;
   padding: 0;
+  max-width: 155px;
+
+  word-break: normal;
+  overflow-wrap: anywhere;
+
   border: none;
 }
 
@@ -818,10 +829,6 @@ img {
 
 .control:active {
   opacity: 0.3;
-}
-
-.control__title {
-  word-break: break-all;
 }
 
 .control__input {
@@ -979,6 +986,7 @@ img {
 
 .handling__view {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   width: 160px;
 }
